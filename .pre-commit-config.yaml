@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/Lucas-C/pre-commit-hooks.git
+    rev: v1.0.1
+    hooks:
+      - id: remove-crlf
+        files: (?!.*third_party)^.*$ | (?!.*book)^.*$
+  - repo: https://github.com/google/yapf.git
+    rev: v0.43.0
+    hooks:
+      - id: yapf
+        files: (.*\.(py|bzl)|BUILD|.*\.BUILD|WORKSPACE)$
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+        args: [ --maxkb=10000 ]
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: detect-private-key
+        files: (?!.*third_party)^.*$ | (?!.*book)^.*$
+      - id: end-of-file-fixer
+      - id: check-xml
+      - id: trailing-whitespace
