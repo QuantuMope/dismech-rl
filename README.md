@@ -18,6 +18,9 @@
 </table>
 </div>
 
+This repo contains code for training various soft manipulator policies using both Elastica and DisMech simulators.
+A preprint containing the experiments and results can be found [here](https://arxiv.org/abs/2511.06667).
+
 
 ## Dependencies
 To run the code in this repo, two dependencies are needed:
@@ -99,4 +102,18 @@ python -m alf.bin.play \
     --root_dir /path/to/dismech_policy \
     --conf_param _USER.render=True
     --conf_param "sim_framework='elastica'"
+```
+
+## Citation
+If our work has helped your research, please cite the following preprint.
+```
+@misc{choi2025rapidlylearningsoftrobot,
+      title={Rapidly Learning Soft Robot Control via Implicit Time-Stepping},
+      author={Andrew Choi and Dezhong Tong},
+      year={2025},
+      eprint={2511.06667},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2511.06667},
+}
 ```
